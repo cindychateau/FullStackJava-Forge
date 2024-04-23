@@ -1,0 +1,116 @@
+<!DOCTYPE html> <!-- HTML 5 --> 
+<html lang="es"> <!-- Documento html, lang = idioma -->
+<head>
+    <meta charset="UTF-8"> <!-- Acentos, tildes, ñ, caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro a HTML</title> <!-- Título/Visualiza en la pestaña navegador -->
+</head>
+<body>
+    
+    <!-- Encabezados/Títulos -->
+    <h1>Encabezado 1</h1> <!-- Título Principal -->
+    <h2>Encabezado 2</h2>
+    <h3>Encabezado 3</h3>
+    <h4>Encabezado 4</h4>
+    <h5>Encabezado 5</h5>
+    <h6>Encabezado 6</h6>
+
+    <p>
+       Este es el párrafo que deriva de la etiqueta p 
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptate, ab, quo eligendi animi minima harum aut, veritatis culpa quam itaque earum. Omnis enim corporis, sequi quas vero voluptatibus laborum!
+    </p>
+
+    <h2>Lista desordenada</h2>
+    <!-- Unordered list -->
+    <ul>
+        <li>Clip</li>
+        <li>Pluma</li>
+        <li>Libreta</li>
+    </ul>
+
+    <h2>Lista ordenada</h2>
+    <!-- Ordered list -->
+    <ol>
+        <li>Formulario Registro</li>
+        <li>Blog Ficticio</li>
+        <li>Trazando nuestro bloques</li>
+    </ol>
+
+    <!-- TABLA -->
+    <table>
+        <!-- Table Header -->
+        <thead>
+            <!-- Table row -->
+            <tr>
+                <!-- Table heading -->
+                <th>Encabezado 1</th>
+                <th>Encabezado 2</th>
+                <th>Encabezado 3</th>
+            </tr>
+        </thead>
+        <!-- Table body -->
+        <tbody>
+            <tr>
+                <!-- table data -->
+                <td>Columna 1.1</td>
+                <td>Columna 1.2</td>
+                <td>Columna 1.3</td>
+            </tr>
+            <tr>
+                <td>Columna 2.1</td>
+                <td>Columna 2.2</td>
+                <td>Columna 2.3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <img src="img/gatito.jpg" alt="Imagen Gatito" > <!-- jpg, jpeg, gif, png, svg, webp  -->
+
+    <div>
+        <!-- Etiqueta divisora. Caja/Cuadro -->
+        <p>Párrafo dentro del div</p>
+        <a href="http://codingdojo.com">Este es un enlace</a>
+    </div>
+
+    <!-- FORMULARIO -->
+    <form action="/accion" method="post" >
+        <div>
+            <label>Texto de input</label>
+            <input type="text" name="input_texto" required >*
+            <input type="number" name="input_numeral" >
+            <input type="password" name="input_password" placeholder="Escribe tu contraseña" >
+            <input type="date" name="input_fecha">
+            <input type="email" name="email_nombresito" >
+        </div>
+        <div>
+            <input type="radio" name="estado_civil" value="casado" id="casado_id" >
+            <label for="casado_id">Casado</label> <br> <!-- Break - Salto de lin -->
+            <input type="radio" name="estado_civil" value="soltero" id="soltero_id" >
+            <label for="soltero_id">Soltero</label>
+        </div>
+        <div>
+            <input type="checkbox" name="mayor_edad" id="mayor_edad_id">
+            <label for="mayor_edad_id">¿Eres mayor de edad?</label>
+        </div>
+        <div>
+            <textarea name="comentario" cols="40" rows="10" maxlength="10" ></textarea>
+        </div>
+        <div>
+            <label>Elige tu lenguaje preferido</label> <!-- Texto que hace referencia aun input -->
+            <select name="lenguaje">
+                <option value="py">Python</option>
+                <option value="j">Java</option>
+                <option value="c">C#</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Enviar Formulario" >
+        </div>
+    </form>
+    <!-- Etiquetas semánticas: Descritivas -->
+
+</body>
+</html>
