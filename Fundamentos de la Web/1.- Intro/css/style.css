@@ -115,3 +115,36 @@ input:required {
     background-repeat: no-repeat; /*repeat, no-repeat, repeat-x, repeat-y*/
     background-size: cover; /*cover: estira verticalmente, contain: estira horizontal */
 }
+
+#modelo_caja {
+    background-color: lightblue;
+    width: 200px; /*Ancho*/
+    height: 100px; /*Alto*/
+
+    /*Margin: al espacio entre mi elemento y el resto de la página*/
+    margin: 20px; /*4 espacios 20px*/
+    margin-top: 100px; /*-top, -right, -bottom, -left*/
+    margin: 50px 15px; /*ArribaAbajo IzqDer */
+    margin: 50px 10px 100px 200px; /*arriba der abajo izq*/
+    /*margin: n1 n2 n3 - n1 arriba, n2 izqder, n3 abajo*/
+
+    /*Padding el margen interno*/
+    padding: 20px;
+    padding-top: 50px; /*-top, -right, -bottom, -left*/
+    padding: 50px 10px; /*ArribaAbajo IzqDer*/
+    padding: 100px 30px 50px 10px; /*arriba der abajo izq*/
+
+    border: 2px solid black; /*solid dotted dashed double*/
+    
+    /*CÓMO CENTRAR HORIZONTALMENTE UN DIV*/
+    margin: 0 auto;
+
+    border-radius: 10px;
+}
+
+.circulo {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /*Circulo perfecto*/
+}
