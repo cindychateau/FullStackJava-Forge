@@ -148,3 +148,40 @@ input:required {
     height: 100px;
     border-radius: 50%; /*Circulo perfecto*/
 }
+
+.inline {
+    /*Desplieguen en 1 sola línea
+    NO permite establecer tamaños*/
+    display: inline;
+}
+
+.block {
+    /*Despliega mi elemento como bloque, no hay nada en la misma línea
+    Si usa tamaño*/
+    display: block;
+}
+
+.inline-block {
+    /*Me permite colocar los elementos en una sola línea y establecer tamaños específicos*/
+    display: inline-block;
+    width: 300px;
+    border: 1px solid black;
+    /*alinea verticalmente*/
+    vertical-align: middle;
+    text-align: center;
+    height: 100px;
+}
+
+.div1 {
+    height: 150px;
+}
+
+.div2 {
+    height: 300px;
+}
+
+.div3 {
+    height: 500px;
+}
+
+
