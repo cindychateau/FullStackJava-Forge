@@ -4,24 +4,42 @@
     <meta charset="UTF-8"> <!-- Acentos, tildes, ñ, caracteres -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro a HTML</title> <!-- Título/Visualiza en la pestaña navegador -->
+    <link rel="stylesheet" href="css/style.css" > <!-- Enlace con CSS -->
 </head>
 <body>
     
     <!-- Encabezados/Títulos -->
     <h1>Encabezado 1</h1> <!-- Título Principal -->
     <h2>Encabezado 2</h2>
-    <h3>Encabezado 3</h3>
+    <h3 class="rojo">Encabezado 3</h3>
     <h4>Encabezado 4</h4>
-    <h5>Encabezado 5</h5>
+    <h5 class="subrayado">Encabezado 5</h5>
     <h6>Encabezado 6</h6>
 
-    <p>
+    <p class="rojo subrayado">
        Este es el párrafo que deriva de la etiqueta p 
     </p>
 
-    <p>
+    <p id="parrafo_especial" class="rojo subrayado">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptate, ab, quo eligendi animi minima harum aut, veritatis culpa quam itaque earum. Omnis enim corporis, sequi quas vero voluptatibus laborum!
     </p>
+
+    <p>
+        Este es un párrafo nuevo <strong>Esta van en negrita</strong>
+    </p>
+    <div>
+        <strong>Etiqueta strong fuera de párrafo</strong>
+    </div>
+
+    <div class="contenedor">
+        <p>Párrafo <span class="palabra">hijo</span></p>
+        <div>
+            <p>Párrafo nieto</p>
+        </div>
+        <p>
+            Otro hijo
+        </p>
+    </div>
 
     <h2>Lista desordenada</h2>
     <!-- Unordered list -->
@@ -76,14 +94,14 @@
     </div>
 
     <!-- FORMULARIO -->
-    <form action="/accion" method="post" >
+    <form action="#" method="post" >
         <div>
             <label>Texto de input</label>
             <input type="text" name="input_texto" required >*
             <input type="number" name="input_numeral" >
             <input type="password" name="input_password" placeholder="Escribe tu contraseña" >
             <input type="date" name="input_fecha">
-            <input type="email" name="email_nombresito" >
+            <input type="email" name="email_nombresito" disabled >
         </div>
         <div>
             <input type="radio" name="estado_civil" value="casado" id="casado_id" >
@@ -110,6 +128,23 @@
             <input type="submit" value="Enviar Formulario" >
         </div>
     </form>
+
+    <div class="color">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat mollitia, consequatur dicta aspernatur eligendi error expedita, quae esse maiores dolore rem a, illum maxime ratione reiciendis iusto earum nam voluptas?
+    </div>
+
+    <p id="texto">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore porro distinctio perspiciatis ipsum fuga ullam fugiat sapiente et voluptatem enim blanditiis non adipisci eligendi rerum accusantium, voluptatibus quam placeat maxime.
+    </p>
+
+    <div class="tamano">
+
+    </div>
+
+    <div class="background">
+
+    </div>
+
     <!-- Etiquetas semánticas: Descritivas -->
 
 </body>
