@@ -1,0 +1,27 @@
+/*CSS RESET*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+    width: 970px; /*MD: 1280px. HD: 1920px*/
+    margin: 0 auto; /*centrar container*/
+}
+
+header {
+    height: 50px;
+    background-color: #f9f9f9;
+}
+
+header h1 {
+    display: inline-block;
+    font-weight: 700;
+}
+
+header h2 {
+    display: inline-block;
+    font-weight: 300;
+}
