@@ -7,13 +7,17 @@
 }
 
 .container {
-    width: 970px; /*MD: 1280px. HD: 1920px*/
-    margin: 0 auto; /*centrar container*/
+    width: 970px;
+    /*MD: 1280px. HD: 1920px*/
+    margin: 0 auto;
+    /*centrar container*/
 }
 
 header {
     height: 50px;
     background-color: #f9f9f9;
+    background: linear-gradient(#F1F1F1, white);
+    padding: 20px;
 }
 
 header h1 {
@@ -24,4 +28,33 @@ header h1 {
 header h2 {
     display: inline-block;
     font-weight: 300;
+}
+
+
+
+main {
+    background: #19090D;
+    background: radial-gradient(white, #19090D);
+    padding: 20px;
+}
+
+
+/* estilos contenedor de perfil */
+img {
+    width: 30%;
+    height: 200px;
+    border: 10px solid grey;
+    display: inline-block;
+    vertical-align: top;
+    /* border-radius: 50%; */
+}
+
+.containerProfile {
+    display: inline-block;
+    width: 60%;
+
+}
+
+.containerProfile p {
+    font-size: small;
 }
