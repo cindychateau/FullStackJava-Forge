@@ -1,0 +1,9 @@
+Nuevo Repo:
+1) git init - Inicializa el repositorio local
+2) git add . o git add NombreArchivo
+3) git commit -m "Mensaje de punto de guardado"
+4) git remote add origin url-del-github
+5) git push -u origin master o main 
+
+Cambio
+2, 3, 5
