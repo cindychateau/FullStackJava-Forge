@@ -1,0 +1,32 @@
+/*
+320px: Teléfono muy pequeños
+480px: La mayoría de los teléfonos
+768px: La mayoría de tablets
+992px: Desktops pequeños
+1200px: Desktops más grande
+1920px: HD
+*/
+
+/*Pantallas con menos de 992px*/
+@media screen and (max-width: 992px) {
+   
+    .column {
+        flex: 50%;
+        font-size: 70px;
+    }
+
+    .bg {
+        background-color: blue;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .column {
+        flex: 100%;
+    }
+
+    .bg {
+        background-color: green;
+    }
+}
