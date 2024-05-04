@@ -48,3 +48,107 @@ n -= 4; //n = n - 4; + - * / %
 var nombre_completo = "Pablo";
 nombre_completo += " Picasso";
 console.log(nombre_completo);
+
+/* CONDICIONALES */
+var bool2 = false;
+if(bool2) { // a === b; a !== b; a < b; a <= b; a > b; a >= b
+    console.log("Variable verdadera");
+} else {
+    console.log("Variable falsa");
+}
+
+if(n >= 15){ // 10 >= 15
+    console.log("Número mayor a 15");
+} else {
+    console.log("Número menor a 15");
+}
+
+var edad_infante = 4;
+if(edad_infante < 2){ // 4 < 2
+    console.log("Es un bebe");
+} else if(edad_infante < 5) { // 4 < 5
+    console.log("Es un toddler");
+} else {
+    console.log("Es un niño");
+}
+
+var temperatura = 20;
+var estaLloviendo = false;
+if(temperatura >= 18 && !estaLloviendo ) { // && AMBAS condicionales se cumplan
+    console.log("Vamos al parque a pasear");
+}
+
+var edad_conducir = 17;
+var permisoPadres = true;
+if(edad_conducir >= 18 || permisoPadres ) { // || una u otra debe de cumplirse
+    console.log("Tienes permiso para obtener tu licencia de manejo");
+}
+
+/* BUCLES O CICLOS */
+
+/*
+i = 0
+¡Hola!
+¿Cómo estás?
+--
+i = 1
+¡Hola!
+¿Cómo estás?
+--
+i = 2
+¡Hola!
+¿Cómo estás?
+--
+i = 3
+¡Hola!
+¿Cómo estás?
+--
+i = 4
+*/
+for(let i=0; i < 4; i++) { //for(inicializar; condicional; paso)
+    console.log("¡Hola!");
+    console.log("¿Cómo estás?");
+}
+
+for(let i=10; i > 0; i--){
+    console.log(i);
+}
+
+let x = 0;
+while(x < 3){
+    console.log("Entramos al while");
+    x++;
+}
+
+var inicio = 2;
+var final = 10;
+/*
+inicio = 2
+final = 10
+Entramos al nuevo while:2:10
+inicio = 4
+final = 9
+---
+Entramos al nuevo while:4:9
+inicio = 6
+final = 8
+---
+Entramos al nuevo while:6:8
+inicio = 8
+final = 7
+*/
+while (inicio < final) {
+    console.log(`Entramos al nuevo while:${inicio}:${final}`);
+    inicio += 2;
+    final--;
+}
+
+var v1 = 1;
+var v2 = "1";
+if(v1 == v2) { // == comparación valor
+    console.log("Son iguales");
+}
+
+if(v1 === v2) { // === comparación de valor y de tipo
+    console.log("Son iguales y que tengan el mismo tipo");
+}
