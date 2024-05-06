@@ -27,16 +27,33 @@ var pokémon = [ //Arreglo
 /* PRINT all the NAMES of the pokemons that have ID greater than 99
     Imprimir todos los NOMBRES de pokemones con ID mayor a 99
 */
+for(var i=0; i<pokemon.length;i++){
+    if(pokemon[i].id>99){
+        console.log(pokemon[i].name);
+    }
+}
 
 /* PRINT the pokémon objects whose id is evenly divisible by 3
     Imprimir el OBJETO en el cual el id es divisible entre 3
 */
+for (let i = 0; i < pokemon.length; i++) {
+    if (pokemon[i].id % 3 == 0) console.log(pokemon[i]);
+}
 
 /* PRINT the pokémon objects that have more than one type
     Imprimir el OBJETO con más de un tipo
 */
-
+for(var i=0;i<pokemon.length;i++){
+    if(pokemon[i].types.length > 1){
+        console.log(pokemon[i]);
+    }
+};
 
 /* PRINT the names of the pokémon whose only type is "poison"
     Imprimir NOMBRE de pokemon que SOLO TIENE tipo "poison"
 */
+
+/*
+== los valores sean iguales
+=== los valores y el tipo de datos types[0] == "poison" .length == 1
+ */
