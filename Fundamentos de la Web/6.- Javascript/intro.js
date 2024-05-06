@@ -152,3 +152,84 @@ if(v1 == v2) { // == comparación valor
 if(v1 === v2) { // === comparación de valor y de tipo
     console.log("Son iguales y que tengan el mismo tipo");
 }
+
+/* ARRAYS - ARREGLOS: LISTA */
+var hobbies = [
+    "Leer",
+    "Correr",
+    "Bailar",
+    "Cantar",
+    "Tocar la guitarra",
+    "Codear",
+    "Jugar videojuegos"
+];
+
+console.log(hobbies[0]);
+hobbies[2] = "Dormir";
+console.log(hobbies);
+
+console.log(hobbies.length);
+for(let i=0; i < hobbies.length; i++) {
+    console.log(hobbies[i]);
+}
+
+var combinado = [
+    1.11,
+    "texto",
+    true,
+    30,
+    ["otra", "lista"]
+]
+
+combinado.push("nuevo elemento"); //Agrega un nuevo elemento al final de la lista
+console.log(combinado);
+combinado.pop(); //Elimina el último elemento de la lista
+combinado.pop();
+console.log(combinado);
+var lista = [1, 2, 3, 4, 5];
+var matriz = [
+    lista, //[1, 2, 3, 4, 5, 6]
+    [7, 8, 9, 10]
+]
+
+
+
+matriz[0].push(6);
+console.log(matriz);
+
+/* OBJETOS: claves y valores */
+var estudiante = {
+    id: 12345,
+    "nombre": "Elena",
+    "apellido": "De Troya",
+    "edad": 25,
+    "promedio": null,
+    "hobbies": ["Leer", "Bailar", "Estudiar"],
+    "direcciones": [
+        {
+            "calle": "Av. del Sol",
+            "num": 123,
+            "ciudad": "Bogota",
+            "pais": "Colombia"
+        },
+        {
+            "calle": "Blvd Acapulco",
+            "num": 345,
+            "ciudad": "Guadalajara",
+            "pais": "Mexico"
+        }
+    ]
+};
+
+console.log(estudiante["nombre"]);
+console.log(estudiante.apellido);
+estudiante.apellido = "De Arco";
+estudiante.promedio = 99.8;
+console.log(estudiante);
+
+estudiante["curso"] = "Java";
+console.log(estudiante);
+
+console.log(estudiante.direcciones[1].ciudad);
+
+console.log(Object.hasOwn(estudiante, "nombre"));
