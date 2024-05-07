@@ -44,9 +44,20 @@ arr1 = [1, 2, 3, 4]
 arr2 = [1, 2, 3, 4]
 return [2, 4, 6, 8]
 */
-function suma_arreglos(arr1, arr2) {
-
-    return ;
+function sumaArrays(arr1,arr2){
+    var sum=0;
+    var arrayR=[];
+    if(arr1.length==arr2.length){
+        for(var i=0; i<arr1.length;i++){
+            //sum=arr1[i]+arr2[i];
+            arrayR.push(arr1[i]+arr2[i]);
+        }
+        return arrayR
+    }else{
+        return text ="no tienen la misma longitud"
+    }
 }
-
-var resultado_arreglo = suma_arreglos([1, 2, 3, 4], [1, 2, 3, 4]);
+var array1=[1,2,4,6];
+var array2=[1,2,4,6];
+var array3=sumaArrays(array1,array2);
+console.log(array3);
