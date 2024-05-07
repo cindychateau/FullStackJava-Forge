@@ -1,0 +1,8 @@
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode p {
+    color: gray;
+}

@@ -60,3 +60,39 @@ function hizo_click(boton)  {
     }
 
 }
+
+function cambio_de_perfil() {
+    var nombre = document.querySelector(".container h1"); //Toma el primer elemento que encuentre
+    console.log(nombre);
+
+    nombre.innerText = "Cynthia Castillo";
+
+    var cargo = document.querySelector("h2");
+    cargo.style.color = "purple";
+    cargo.innerText = "La mejor maestra del Dojo";
+
+    var p = document.querySelector('#parrafo1');
+    p.innerHTML = "La profesora trabaja actualmente con el mejor grupo de programación en Argentina. <br> Estamos en el stack de Fundamentos de la Web <span class='red'><3</span>";
+}
+
+function switch_mode() {
+    var container = document.querySelector('.container');
+
+    /*
+    container = {
+        innerText,
+        innerHTML,
+        style,
+        classList: [
+            "container",
+            "dark-mode"
+        ]
+    }
+    */
+
+    if(container.classList.contains("dark-mode")){
+        container.classList.remove("dark-mode");
+    } else {
+        container.classList.add("dark-mode");
+    }
+}

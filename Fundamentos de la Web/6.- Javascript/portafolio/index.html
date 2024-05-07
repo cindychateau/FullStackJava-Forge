@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Juana De Arco</h1>
+            <button onclick="switch_mode()" class="btn-project">Switch mode</button>
             <h2>Ama del internet y Coding Dojo</h2>
         </header>
         <main>
@@ -17,13 +19,14 @@
                 <img src="Portfolio_images/photo_of_me.jpg" alt="Foto de Juana" >
                 <div class="description">
                     <h3>About</h3>
-                    <p>
+                    <p id="parrafo1" >
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum exercitationem eum eius voluptatibus odio, omnis voluptas blanditiis explicabo! At commodi tempore provident in quo adipisci sed iusto earum repellat sint.
                     </p>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum exercitationem eum eius voluptatibus odio, omnis voluptas blanditiis explicabo! At commodi tempore provident in quo adipisci sed iusto earum repellat sint.
                     </p>
                     <a href="#" onclick="alerta()" >Continuar Leyendo..</a>
+                    <button class="btn-project" onclick="cambio_de_perfil()">Cambiar perfil</button>
                 </div>
             </div>
             <div class="container_projects">

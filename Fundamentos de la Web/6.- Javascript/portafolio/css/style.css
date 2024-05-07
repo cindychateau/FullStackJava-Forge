@@ -110,3 +110,8 @@ footer {
 footer img {
     width: 20px;
 }
+
+.red {
+    color: red;
+    font-weight: bold;
+}
