@@ -23,12 +23,33 @@
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum exercitationem eum eius voluptatibus odio, omnis voluptas blanditiis explicabo! At commodi tempore provident in quo adipisci sed iusto earum repellat sint.
                     </p>
-                    <a href="#">Continuar Leyendo..</a>
+                    <a href="#" onclick="alerta()" >Continuar Leyendo..</a>
                 </div>
             </div>
             <div class="container_projects">
                 <article>
-                    <h3>La Mode</h3>
+                    <h3 id="h3" onclick="cambia_texto(this)" >La Mode</h3>
+                    <img src="Portfolio_images/lamode.png" alt="Proyecto La Mode" class="img-grande">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quasi beatae consectetur magnam magni saepe nulla, maiores consequuntur quis illum iste odio omnis dolor odit? Debitis sed tenetur recusandae dolorem?
+                    </p>
+                    <div class="technologies">
+                        <h3>Technologies:</h3>
+                        <div class="logos">
+                            <img onmouseover="cambia_imagen(this)" onmouseout="regresa_imagen(this)" src="Portfolio_images/ajax.png" alt="ajax" >
+                            <img onmouseover="cambia_imagen(this)" onmouseout="regresa_imagen(this)" src="Portfolio_images/ajax.png" alt="ajax">
+                            <img onmouseover="cambia_imagen(this)" onmouseout="regresa_imagen(this)" src="Portfolio_images/ajax.png" alt="ajax">
+                            <img src="Portfolio_images/ajax.png" alt="ajax">
+                            <img src="Portfolio_images/ajax.png" alt="ajax">
+                            <img src="Portfolio_images/ajax.png" alt="ajax">
+                            <img src="Portfolio_images/ajax.png" alt="ajax">
+                            <img src="Portfolio_images/ajax.png" alt="ajax">
+                        </div>
+                        <button ondblclick="eliminar(this)" class="btn-project">La Mode</button>
+                    </div>
+                </article>
+                <article>
+                    <h3 onclick="cambia_texto(this)">La Mode</h3>
                     <img src="Portfolio_images/lamode.png" alt="Proyecto La Mode" class="img-grande">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quasi beatae consectetur magnam magni saepe nulla, maiores consequuntur quis illum iste odio omnis dolor odit? Debitis sed tenetur recusandae dolorem?
@@ -49,28 +70,7 @@
                     </div>
                 </article>
                 <article>
-                    <h3>La Mode</h3>
-                    <img src="Portfolio_images/lamode.png" alt="Proyecto La Mode" class="img-grande">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quasi beatae consectetur magnam magni saepe nulla, maiores consequuntur quis illum iste odio omnis dolor odit? Debitis sed tenetur recusandae dolorem?
-                    </p>
-                    <div class="technologies">
-                        <h3>Technologies:</h3>
-                        <div class="logos">
-                            <img src="Portfolio_images/ajax.png" alt="ajax">
-                            <img src="Portfolio_images/ajax.png" alt="ajax">
-                            <img src="Portfolio_images/ajax.png" alt="ajax">
-                            <img src="Portfolio_images/ajax.png" alt="ajax">
-                            <img src="Portfolio_images/ajax.png" alt="ajax">
-                            <img src="Portfolio_images/ajax.png" alt="ajax">
-                            <img src="Portfolio_images/ajax.png" alt="ajax">
-                            <img src="Portfolio_images/ajax.png" alt="ajax">
-                        </div>
-                        <button class="btn-project">La Mode</button>
-                    </div>
-                </article>
-                <article>
-                    <h3>La Mode</h3>
+                    <h3 onclick="cambia_texto(this)">La Mode</h3>
                     <img src="Portfolio_images/lamode.png" alt="Proyecto La Mode" class="img-grande">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quasi beatae consectetur magnam magni saepe nulla, maiores consequuntur quis illum iste odio omnis dolor odit? Debitis sed tenetur recusandae dolorem?
@@ -110,6 +110,11 @@
                 <a href="#">juanadeaco</a>
             </p>
         </footer>
+        <div>
+            <h5 id="clicks">0</h5>
+            <button class="btn-project" onclick="hizo_click(this)">Haz click aquí</button>
+        </div>
     </div>
+    <script src="js/script.js" ></script>
 </body>
 </html>
