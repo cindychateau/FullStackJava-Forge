@@ -1,0 +1,112 @@
+* { /*CSS RESET*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+}
+
+main {
+    /* height: 300px; TEMPORAL */
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#49363e+1,6f5a64+50,49363e+100 */
+    background: #49363e; /* Old browsers */
+    background: -moz-linear-gradient(left,  #49363e 1%, #6f5a64 50%, #49363e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #49363e 1%,#6f5a64 50%,#49363e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #49363e 1%,#6f5a64 50%,#49363e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49363e', endColorstr='#49363e',GradientType=1 ); /* IE6-9 */
+    padding: 20px;
+}
+
+.information {
+    display: flex;
+    gap: 50px;
+}
+
+.information img {
+    flex: 1;
+    min-width: 100px;
+    border: 4px solid lightgray;
+}
+
+.description {
+    flex: 1;
+    background-color: beige;
+}
+
+h3 {
+    color: white;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a6a5ac+1,878594+50,a6a5ac+100 */
+    background: #a6a5ac; /* Old browsers */
+    background: -moz-linear-gradient(top,  #a6a5ac 1%, #878594 50%, #a6a5ac 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #a6a5ac 1%,#878594 50%,#a6a5ac 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #a6a5ac 1%,#878594 50%,#a6a5ac 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6a5ac', endColorstr='#a6a5ac',GradientType=0 ); /* IE6-9 */
+    padding: 15px;
+    text-align: left;
+}   
+
+.description p, .description a {
+    margin: 15px;
+}
+
+.container_projects {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+article {
+    width: 290px;
+    height: 630px;
+    background-color: lightgray;
+    position: relative;
+}
+
+article > img {
+    width: 100%;
+}
+
+article p {
+    padding: 10px;
+}
+
+.logos {
+    padding: 15px;
+    text-align: left;
+}
+
+.logos img {
+   width: 40px; 
+}
+
+.btn-project {
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.technologies {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+}
+
+footer img {
+    width: 20px;
+}
