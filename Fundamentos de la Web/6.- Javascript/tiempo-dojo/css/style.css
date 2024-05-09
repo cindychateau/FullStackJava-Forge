@@ -1,0 +1,49 @@
+/*CSS RESET*/
+* {
+    margin:0;
+    padding:0;
+    border:0;
+    font-family: "Quicksand", sans-serif;
+}
+
+header {
+    background-color: #a0c5f8;
+}
+
+nav {
+    width: 1000px;
+    color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    display: flex;
+    width: 500px;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+/*nav ul li a*/
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.san-jose {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 25px 0;
+    border-bottom: 3px solid black;
+    align-items: center;
+}
+
+.san-jose select {
+    border: 1px solid;
+}
