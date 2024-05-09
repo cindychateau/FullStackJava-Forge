@@ -47,3 +47,40 @@ nav a {
 .san-jose select {
     border: 1px solid;
 }
+
+.semana {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 5%;
+    margin-top: 30px;
+}
+
+.semana article {
+    flex: 1;
+    text-align: center;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+article img {
+    width: 100px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+.max {
+    color: red;
+}
+
+.min {
+    color: blue;
+}
+
+.temperaturas {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 15px;
+}
