@@ -15,16 +15,22 @@
         <nav>
             <h1>Tiempo Dojo</h1>
             <ul>
-                <li><a href="#">Garin</a></li>
-                <li><a href="#">Berlin</a></li>
-                <li><a href="#">Dubai</a></li>
+                <li>
+                    <a href="#" onclick="alerta(this)" >Garin</a>
+                </li>
+                <li>
+                    <a href="#" onclick="alerta(this)">Berlin</a>
+                </li>
+                <li>
+                    <a href="#" onclick="alerta(this)">San José</a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="san-jose">
-            <h2>San José</h2>
+            <h2 id="ciudad">San José</h2>
             <form>
                 <label>mostrar temperatura en:</label>
                 <select>
@@ -81,7 +87,10 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quo explicabo magnam itaque, temporibus, consequuntur laborum repudiandae laboriosam voluptatem deserunt eveniet deleniti? Vitae, molestias iure blanditiis nihil minima eius explicabo.
                 </p>
             </div>
-            <button>Acepto!</button>
+            <button onclick="eliminar_cookies()" >Acepto!</button>
+        </div>
+        <div class="info">
+            tiempo@dojo.com
         </div>
     </footer>
 
