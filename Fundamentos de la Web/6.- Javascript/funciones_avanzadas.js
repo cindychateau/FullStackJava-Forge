@@ -63,3 +63,13 @@ arr = [1, -1, 2, -2, 3, -3]
 imprimir -6
 return 6
  */
+var sumaPositivos = arr => {
+    var positivos = 0; //suma nums positivos
+    var negativos = 0; //suma nums negativos;
+    for(let i=0; i<arr.length; i++) {
+        positivos += arr[i] > 0 ? arr[i] : 0;
+        negativos += arr[i] < 0 ? arr[i] : 0;
+    }
+    console.log(negativos);
+    return positivos;
+}
