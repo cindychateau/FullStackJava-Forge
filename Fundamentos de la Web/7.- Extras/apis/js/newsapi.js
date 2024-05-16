@@ -47,5 +47,12 @@ async function buscarNoticias() {
                                 <p>${articulo.description}</p>
                                 <img src="${articulo.urlToImage}" style="width:200px;" >
                             </article>`);
+    
+    console.log(articulos);
+
+    var nombres = ["Elena", "Juan", "Pablo", "Juana"];
+    var texto = nombres.join("!"); //Elena!Juan!Pablo!Juana
+    
+    document.querySelector('main').innerHTML = articulos.join("");
 
 }
