@@ -10,6 +10,42 @@ async function buscarNoticias() {
     let data = await response.json();
 
     console.log(data);
+    /*
+    data = {
+        "status": "ok",
+        "totalResults": 1000,
+        "articles": [ //Lista
+            { //OBJETO
+                "author": "X",
+                "content": "X",
+                "description": "X",
+                "title": "X",
+                "urlToImage": "X"
+            },
+            { //OBJETO
+                "author": "X",
+                "content": "X",
+                "description": "X",
+                "title": "X",
+                "urlToImage": "X"
+            },
+            { //OBJETO
+                "author": "X",
+                "content": "X",
+                "description": "X",
+                "title": "X",
+                "urlToImage": "X"
+            }
+        ]
+    }
+    */
 
+    var articulos = data.articles.map(articulo => 
+                            `<article>
+                                <h2>${articulo.title}</h2>
+                                <u>${articulo.author}</u>
+                                <p>${articulo.description}</p>
+                                <img src="${articulo.urlToImage}" style="width:200px;" >
+                            </article>`);
 
 }

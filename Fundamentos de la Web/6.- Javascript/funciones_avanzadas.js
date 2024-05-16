@@ -73,3 +73,27 @@ var sumaPositivos = arr => {
     console.log(negativos);
     return positivos;
 }
+
+/* FUNCIONES DE ARREGLOS */
+
+//forEach: recorre un arreglo
+var numeros = [1, 2, 3, 4, 5, 6, 7];
+numeros.forEach(function(num) {
+    console.log("En este momento recorro el num: "+num);
+});
+
+numeros.forEach(num => console.log("En este momento recorro el num: "+num));
+
+//filter: genera una nueva lista recorriendo el array original y agregando solo aquellos que cumplan con la condicional
+var numeros_filtrados = numeros.filter(num => num > 5);
+console.log(numeros_filtrados);
+
+//map: genera una nueva lista, recorriendo el array original y agregando/alterando el valor del elemento
+var nombres = ["Elena", "Juana", "Pedro", "Paco", "Cynthia"];
+var saludos = nombres.map(nombre => `¡Hola! ${nombre} ¿Cómo estás?`);
+console.log(saludos);
+
+var nombres_filtrados = nombres.filter(nombre => nombre.startsWith("P"));
+console.log(nombres_filtrados);
+var nuevos_saludos = nombres_filtrados.map(nombre => `¡Hola ${nombre} ! Te saludo de nuevo`);
+console.log(nuevos_saludos);
