@@ -18,13 +18,14 @@
             <img src="img/gato3.jpeg" alt="Gato 3">
         </div>
 
-        <a href="#" class="prev" > < </a>
-        <a href="#" class="next"> > </a>
+        <a href="#" class="prev" onclick="prevSlide()" > < </a>
+        <a href="#" class="next" onclick="nextSlide()"> > </a>
     </div>
     <div class="container-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+        <span onclick="showSlide(0)" class="dot active"></span>
+        <span onclick="showSlide(1)" class="dot"></span>
+        <span onclick="showSlide(2)" class="dot"></span>
     </div>
+    <script src="script.js" ></script>
 </body>
 </html>
