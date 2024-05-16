@@ -1,0 +1,61 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.db {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 6px 2px 6px black;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+.prev:hover, .next:hover {
+    color: lightgray;
+}
+
+.container-dots {
+    text-align: center;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: lightgray;
+    display: inline-block;
+}
+
+.active {
+    background-color: gray;
+}
