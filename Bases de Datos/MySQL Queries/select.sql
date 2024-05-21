@@ -29,7 +29,7 @@ SELECT * FROM usuarios WHERE edad > 25 ORDER BY nombre ASC; -- ASC (A-Z), DESC (
 
 SELECT * FROM usuarios WHERE edad > 25 ORDER BY nombre ASC LIMIT 1, 3; -- inicio, cantidad
 
-SELECT nombre, edad FROM usuarios LIMIT 0, 5;
+SELECT nombre AS name, edad AS age FROM usuarios LIMIT 0, 5;
 
 -- SELECT columna1, columna2 FROM tabla
 -- WHERE condicional (AND OR)
