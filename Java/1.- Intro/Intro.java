@@ -83,6 +83,28 @@ public class Intro {
             System.out.println("Puedes obtener tu licencia de conducir");
         }
 
+        impresion();
+        int resultado = sumatoria(5, 3); // return de sumatoria
+        System.out.println(resultado);
+
+    }
+
+
+
+    //Permiso función: public, private, protected
+    //static: es de mi clase. (Más detalle en la sesión OOP)
+    //tipo de valor de retorno: String int double. No hay valor de retorno: void
+    //nombreFuncion(parametros a recibir)
+    public static int sumatoria(int num1, int num2) {
+        return num1+num2;
+    }
+
+    private static String hola(String nombre){
+        return "Hola "+nombre;
+    }
+
+    public static void impresion() {
+        System.out.println("Entro al metodo");
     }
 
 }
