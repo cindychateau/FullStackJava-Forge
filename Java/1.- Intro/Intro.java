@@ -5,6 +5,7 @@ camelCase - primeraLetraMinRestoMayus -> Nombres de variables y nombres de méto
 javac NombreArchivo.java -> compilar
 java NombreArchivo -> interpretar/ejecutar
  */
+import java.util.ArrayList;
 public class Intro {
 
     /*Método principal: el que se ejecuta al hacer la ejecución del archivo */
@@ -86,6 +87,72 @@ public class Intro {
         impresion();
         int resultado = sumatoria(5, 3); // return de sumatoria
         System.out.println(resultado);
+
+        //ARREGLOS / ARRAY / LISTAS: Estructura de datos en la cual podemos guardar valores en distintos índices. Lista de valores
+        //Todos los valores deben de tener el mismo tipo de dato
+        int[] arreglo; //Declaración
+        arreglo = new int[5]; //Inicialización
+        arreglo[0] = 4; //Asignación de valor
+        arreglo[1] = 8;
+        arreglo[2] = 8;
+        arreglo[3] = 5;
+        arreglo[4] = 9;
+
+        int[] arreglo2 = {4, 8, 8, 5, 9}; //declaración, inicialización y asignación
+        System.out.println(arreglo2[2]);
+
+        //ArrayList -> Arreglo dinámico
+        ArrayList<Integer> arreglo3 = new ArrayList<Integer>(); //Declaración e Inic
+        arreglo3.add(10);
+        arreglo3.add(20);
+        arreglo3.add(30);
+        //.toString() -> permite imprimirlo facilmente
+        System.out.println(arreglo3);
+        System.out.println(arreglo3.get(2)); //arreglo3[2]
+
+        int dia = 2;
+        switch(dia) {
+            case 1:
+                System.out.println("Lunes");
+                break; //Salimos por completo del switch
+            case 2:
+                System.out.println("Martes");
+                break;
+            case 3:
+                System.out.println("Miércoles");
+                break; 
+            case 4:
+                System.out.println("Jueves");
+                break;   
+            case 5:
+                System.out.println("Viernes");
+                break;
+            case 6:
+                System.out.println("Sábado");
+                break;
+            case 7:
+                System.out.println("Domingo");
+                break;
+            default:
+                System.out.println("Solo tenemos 7 días!");
+                break;
+        }
+
+        /* BUCLES */
+        for(int j=0; j<5; j++) { //inicialización; condicional; paso
+            System.out.println("hey!");
+        }
+
+        int i = 0;
+        while(i < 5) { //Primero pregunta por la condicional
+            System.out.println("oh!");
+            i++;
+        }
+
+        int m = 10;
+        do { //Primero hace las cosas y al final compara con la condicional
+            System.out.println("let's go!");
+        } while(m < 5);
 
     }
 
