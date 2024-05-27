@@ -6,6 +6,7 @@ javac NombreArchivo.java -> compilar
 java NombreArchivo -> interpretar/ejecutar
  */
 import java.util.ArrayList;
+import java.util.HashMap;
 public class Intro {
 
     /*Método principal: el que se ejecuta al hacer la ejecución del archivo */
@@ -153,6 +154,19 @@ public class Intro {
         do { //Primero hace las cosas y al final compara con la condicional
             System.out.println("let's go!");
         } while(m < 5);
+
+        /*
+        estudiante = {
+            "nombre": "Elena",
+            "apellido": "De Troya"
+        } 
+        Javascript: objeto. Python: diccionario
+         */
+        HashMap<String, String> estudiante = new HashMap<String, String>();
+        estudiante.put("nombre", "Elena");
+        estudiante.put("apellido", "De Troya");
+        estudiante.put("curso", "Java");
+        System.out.println(estudiante.get("nombre"));
 
     }
 
