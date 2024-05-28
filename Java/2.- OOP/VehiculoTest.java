@@ -46,6 +46,8 @@ class VehiculoTest {
         System.out.println(moto1);
         System.out.println(auto4); //Ante un obj busca el método toString.
 
+        System.out.println("Total de vehiculos:"+Vehiculo.getCantidadVehiculos());
+
     }
 
 }

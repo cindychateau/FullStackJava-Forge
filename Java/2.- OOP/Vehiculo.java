@@ -7,9 +7,13 @@ class Vehiculo {
     private String color;
     private int ruedas;
 
+    //Variable estática: se comparte ante todas las instancias y es propia de la clase y no de un objeto específico
+    private static int cantidadVehiculos = 0;
+
     /* Método Constructor: es el encargado de inicializar mi objeto */
     public Vehiculo() {
         //NO inicializo ningún valor
+        cantidadVehiculos++;
     }
 
     /* SOBRECARGA de métodos constructores 
@@ -31,6 +35,7 @@ class Vehiculo {
         this.color = color;
         //auto3.ruedas = 4
         this.ruedas = ruedas;
+        cantidadVehiculos++;
     }
 
     public Vehiculo(int anio, String marca, String modelo, int ruedas){
@@ -39,6 +44,7 @@ class Vehiculo {
         this.modelo = modelo;
         this.color = "blanco";
         this.ruedas = ruedas;
+        cantidadVehiculos++;
     }
 
     //Método de los objetos Vehiculo
@@ -86,6 +92,11 @@ class Vehiculo {
 
     public void setRuedas(int ruedas){
         this.ruedas = ruedas;
+    }
+
+    /*Método estatico: propio de la clase y NO de un objeto específico */
+    public static int getCantidadVehiculos(){
+        return cantidadVehiculos;
     }
 
 }
