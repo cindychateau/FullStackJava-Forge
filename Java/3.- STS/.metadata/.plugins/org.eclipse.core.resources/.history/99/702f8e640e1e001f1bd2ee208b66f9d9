@@ -1,0 +1,24 @@
+package com.codingdojo.cynthia;
+
+public class Vehiculo {
+	
+	private int anio;
+	private String marca;
+	private String modelo;
+	private String color;
+	private int ruedas;
+	
+	public Vehiculo() {
+	}
+
+	public Vehiculo(int anio, String marca, String modelo, String color, int ruedas) {
+		this.anio = anio;
+		this.marca = marca;
+		this.modelo = modelo;
+		this.color = color;
+		this.ruedas = ruedas;
+	}
+	
+	
+	
+}

@@ -1,0 +1,13 @@
+package com.codingdojo.cynthia;
+
+public class Aplicacion {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Vehiculo auto1 = new Vehiculo(2010, "Honda", "Civic", "Rojo", 4);
+		System.out.println("Marca Auto1: "+auto1.getMarca());
+		
+	}
+
+}
