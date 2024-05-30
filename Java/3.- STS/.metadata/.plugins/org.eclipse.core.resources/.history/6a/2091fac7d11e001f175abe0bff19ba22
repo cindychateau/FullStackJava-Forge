@@ -1,0 +1,5 @@
+package com.codingdojo.cynthia;
+
+public class Bicicleta extends Vehiculo implements ManejarVehiculo {
+	
+}

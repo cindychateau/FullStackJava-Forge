@@ -19,6 +19,18 @@ public class Aplicacion {
 		System.out.println(automovil); //¿Qué se va a imprimir?
 		automovil.imprimirAuto();
 		
+		Bicicleta bici = new Bicicleta();
+		
+		automovil.acelerar();
+		automovil.manejar();
+		automovil.acelerar();
+		automovil.desacelerar();
+		System.out.println("------------");
+		
+		bici.acelerar();
+		bici.manejar();
+		bici.acelerar();
+		bici.desacelerar();
 	}
 
 }

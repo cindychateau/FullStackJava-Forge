@@ -9,6 +9,8 @@ public class Vehiculo {
 	private String color;
 	private int ruedas;
 	
+	protected int velocidad = 0;
+	
 	public Vehiculo() {
 	}
 

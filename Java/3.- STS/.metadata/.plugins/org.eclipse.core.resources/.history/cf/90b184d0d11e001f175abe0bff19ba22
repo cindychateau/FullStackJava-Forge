@@ -1,0 +1,9 @@
+package com.codingdojo.cynthia;
+
+public class Bicicleta extends Vehiculo implements ManejarVehiculo {
+	
+	public void acelerar() {
+		System.out.println("Pedaleo más rápido");
+	}
+	
+}
