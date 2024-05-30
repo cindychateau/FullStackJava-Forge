@@ -14,6 +14,11 @@ public class Aplicacion {
 		/*Para agregar importación: Ctrl + Shift + O*/
 		ArrayList<Integer> lista = new ArrayList<Integer>();
 		
+		Auto automovil = new Auto(2020, "Fiat", "Cronos", "Verde", 4, "ABC1234");
+		System.out.println("Color automovil: "+automovil.getColor());
+		System.out.println(automovil); //¿Qué se va a imprimir?
+		automovil.imprimirAuto();
+		
 	}
 
 }

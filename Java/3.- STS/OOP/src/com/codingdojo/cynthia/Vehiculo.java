@@ -2,7 +2,8 @@ package com.codingdojo.cynthia;
 
 public class Vehiculo {
 	
-	private int anio;
+	//protected se pueden usar también en hijos
+	protected int anio; 
 	private String marca;
 	private String modelo;
 	private String color;
