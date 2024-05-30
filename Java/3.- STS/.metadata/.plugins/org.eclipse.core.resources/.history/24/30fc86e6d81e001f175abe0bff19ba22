@@ -1,0 +1,10 @@
+package com.codingdojo.cynthia;
+
+public class Gorilla extends Mammal {
+	
+	public void throwSomething() {
+		System.out.println("U-U-U el gorila te lanzó algo");
+		super.energyLevel -= 5;
+	}
+	
+}

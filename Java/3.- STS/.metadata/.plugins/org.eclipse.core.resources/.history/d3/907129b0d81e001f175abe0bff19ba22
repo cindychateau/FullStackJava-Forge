@@ -1,0 +1,9 @@
+package com.codingdojo.cynthia;
+
+public class Gorilla extends Mammal {
+	
+	public void throwSomething() {
+		
+	}
+	
+}

@@ -1,4 +1,3 @@
 INDEX VERSION 1.131+/Users/cynthia/Desktop/Java - Forge/Java/3.- STS/.metadata/.plugins/org.eclipse.jdt.core
 3193546935.index
-715454448.index
 1865797976.index
