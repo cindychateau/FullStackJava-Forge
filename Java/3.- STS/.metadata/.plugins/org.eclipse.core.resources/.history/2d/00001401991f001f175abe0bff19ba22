@@ -1,0 +1,9 @@
+package com.codingdojo.cynthia;
+
+public class Cuadrado extends Figura {
+	
+	private double longitud;
+	
+	
+	
+}

@@ -31,16 +31,6 @@ public class Aplicacion {
 		bici.manejar();
 		bici.acelerar();
 		bici.desacelerar();
-		
-		System.out.println("------------");
-		
-		Cuadrado cuadrado = new Cuadrado(10);
-		System.out.println(cuadrado.area());
-		
-		Triangulo triangle = new Triangulo(10, 5);
-		System.out.println(triangle.area());
-		
-		
 	}
 
 }

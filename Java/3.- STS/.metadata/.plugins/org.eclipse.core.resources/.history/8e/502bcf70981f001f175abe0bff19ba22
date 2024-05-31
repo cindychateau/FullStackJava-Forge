@@ -1,0 +1,7 @@
+package com.codingdojo.cynthia;
+
+public abstract class Figura {
+	
+	abstract double area(); //Depende del hijo que herede de Figura, la implementación del método area
+	
+}

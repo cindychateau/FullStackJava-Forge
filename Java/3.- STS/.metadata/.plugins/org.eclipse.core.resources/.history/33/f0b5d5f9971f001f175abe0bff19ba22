@@ -1,0 +1,5 @@
+package com.codingdojo.cynthia;
+
+public abstract class Figura {
+
+}

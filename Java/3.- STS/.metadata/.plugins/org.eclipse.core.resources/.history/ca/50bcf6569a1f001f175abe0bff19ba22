@@ -34,11 +34,7 @@ public class Aplicacion {
 		
 		System.out.println("------------");
 		
-		Cuadrado cuadrado = new Cuadrado(10);
-		System.out.println(cuadrado.area());
 		
-		Triangulo triangle = new Triangulo(10, 5);
-		System.out.println(triangle.area());
 		
 		
 	}
