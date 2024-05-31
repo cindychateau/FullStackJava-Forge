@@ -1,0 +1,12 @@
+package com.codingdojo.cynthia;
+
+public class BankAccount {
+	
+	
+	private String numeroCuenta;
+	private double saldoCuentaCorriente;
+	private double saldoCuentaAhorros;
+	
+	private static int cantidadCuentas = 0;
+	
+}

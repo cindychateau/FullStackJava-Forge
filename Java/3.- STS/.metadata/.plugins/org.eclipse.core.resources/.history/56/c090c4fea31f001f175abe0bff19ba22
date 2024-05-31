@@ -1,0 +1,60 @@
+package com.codingdojo.cynthia;
+
+import java.util.Random;
+
+public class BankAccount {
+	
+	
+	private String numeroCuenta; //"1234567890"
+	private double saldoCuentaCorriente;
+	private double saldoCuentaAhorros;
+	
+	private static int cantidadCuentas = 0; //Cuántas cuentas se han creado
+	private static double totalDinero = 0;  //Cuánto dinero tenemos en TODAS las cuentas
+	
+	private static String generarCuentaAleatoria() {
+		String textoNumerosRandom = ""; //String vacío
+		
+		Random r = new Random(); //Crea una instancia de la clase Random
+		//r.nextInt(10); -> Genera un número entre 0-9
+		
+		/*
+		 textoNumerosRandom = ""
+		 textoNumerosRandom = "1";
+		 textoNumerosRandom = "13";
+		 textoNumerosRandom = "138";
+		 textoNumerosRandom = "138";
+		 ...
+		 */
+		for(int i=0; i<10; i++) {
+			textoNumerosRandom += r.nextInt(10);
+		}
+		
+		return textoNumerosRandom;
+	}
+	
+	//Constructor
+	public BankAccount() {
+		this.saldoCuentaAhorros = 0;
+		this.saldoCuentaCorriente = 0;
+		this.numeroCuenta = generarCuentaAleatoria();
+		
+		cantidadCuentas++;
+	}
+
+	public double getSaldoCuentaCorriente() {
+		return saldoCuentaCorriente;
+	}
+
+	public double getSaldoCuentaAhorros() {
+		return saldoCuentaAhorros;
+	}
+	
+	public void depositarDinero(double cantidad, String cuenta) {
+		//cuenta = "ahorros" o cuenta = "corriente"
+		if(cuenta.equals("ahorros")) {
+			this.saldoCuentaAhorros += cantidad;
+		}
+	}
+	
+}

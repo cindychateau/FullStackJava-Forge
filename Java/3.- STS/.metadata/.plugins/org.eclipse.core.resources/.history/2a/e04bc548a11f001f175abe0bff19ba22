@@ -1,0 +1,21 @@
+package com.codingdojo.cynthia;
+
+public class BankAccount {
+	
+	
+	private String numeroCuenta; //"1234567890"
+	private double saldoCuentaCorriente;
+	private double saldoCuentaAhorros;
+	
+	private static int cantidadCuentas = 0; //Cuántas cuentas se han creado
+	private static double totalDinero = 0;  //Cuánto dinero tenemos en TODAS las cuentas
+	
+	private static String generarCuentaAleatoria() {
+		String textoNumerosRandom = ""; //String vacío
+		
+		Random r = new Random(); //Crea una instancia de la clase Random
+		
+		return textoNumerosRandom;
+	}
+	
+}
