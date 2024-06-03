@@ -1,7 +1,9 @@
 package com.codingdojo.cynthia.controladores;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 //@ anotación
@@ -27,7 +29,51 @@ public class ControladorBase {
 		
 	}
 	
-	// /usuarios/hola
-	// /usuarios/saludo
+	// /usuarios/hola?nombre=Elena
+	@GetMapping("/hola")
+	public String hola( @RequestParam(value="nombre", required=false) String name ) {
+		if(name == null) {
+			return "<h1>¡Hola! </h1>";
+		}
+		
+		return "<h1>¡Hola "+name+"! </h1>";
+		
+	}
+	
+	/*  /usuarios/saludos?nombre=Elena&apellido=De Troya  */
+	@GetMapping("/saludos")
+	public String saludos( @RequestParam(value="nombre") String name, 
+						   @RequestParam(value="apellido") String last_name	) {
+		return "<h1>Saludos cordiales, "+name+" "+last_name+"</h1>";
+	}
+	
+	/* /usuarios/hello/Elena  */
+	@GetMapping("/hello/{nombre}")
+	public String hello( @PathVariable("nombre") String name ) {
+		return "<h2>Hello "+name+"</h2>";
+	}
+	
+	@GetMapping("/hello/{nombre}/{apellido}") /* /usuarios/hello/Elena/De Troya */
+	public String hello( @PathVariable("nombre") String name, 
+			             @PathVariable("apellido") String last_name) {
+		return "<h2>Hello "+name+" "+last_name+"</h2>";
+	}
+	
+	@GetMapping("/hello/{nombre}/{apellido}/{cantidad}") /* /usuarios/hello/Elena/De Troya/5 */
+	public String hello(@PathVariable("nombre") String name, 
+			            @PathVariable("apellido") String last_name,
+			            @PathVariable("cantidad") int cantidad) {
+		
+		String respuesta = "<ul>";
+		
+		for(int i=0; i<cantidad; i++) {
+			respuesta += "<li>"+name+" "+last_name+"</li>";
+		}
+		
+		respuesta += "</ul>";
+		return respuesta;
+		
+	}
+	
 	
 }
