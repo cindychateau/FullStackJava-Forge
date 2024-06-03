@@ -1,0 +1,6 @@
+package com.codingdojo.cynthia.controladores;
+
+@RestController //Indica que este archivo es un controlador del tipo API REST
+public class ControladorBase {
+
+}
