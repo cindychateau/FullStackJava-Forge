@@ -2095,3 +2095,77 @@ java.lang.InterruptedException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.epp.mpc.core 1 0 2024-06-04 15:34:41.780
+!MESSAGE Some entries could not be found on the Marketplace
+!SUBENTRY 1 org.eclipse.epp.mpc.core 1 0 2024-06-04 15:34:41.782
+!MESSAGE Node not found: '3394048'
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-06-04 15:48:27.595
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-04 15:50:38.183
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-04 15:50:38.187
+!MESSAGE classpath=75 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-04 15:50:38.189
+!MESSAGE buffering callback sts4.classpath.GasAVSGd ProyectoUsuarios false 75
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-04 15:50:38.189
+!MESSAGE executing callback sts4.classpath.GasAVSGd 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-04 15:50:39.983
+!MESSAGE executing callback sts4.classpath.GasAVSGd SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-04 15:50:39.984
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-04 15:50:39.994
+!MESSAGE classpath=75 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-04 15:50:40.031
+!MESSAGE buffering callback sts4.classpath.GasAVSGd ProyectoUsuarios false 75
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-04 15:50:40.032
+!MESSAGE executing callback sts4.classpath.GasAVSGd 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-04 15:50:40.171
+!MESSAGE executing callback sts4.classpath.GasAVSGd SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-04 15:51:02.666
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-04 15:51:02.680
+!MESSAGE classpath=76 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-04 15:51:02.682
+!MESSAGE buffering callback sts4.classpath.GasAVSGd ProyectoUsuarios false 76
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-04 15:51:02.683
+!MESSAGE executing callback sts4.classpath.GasAVSGd 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-06-04 15:51:02.738
+!MESSAGE executing callback sts4.classpath.GasAVSGd SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-06-04 16:36:19.118
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)

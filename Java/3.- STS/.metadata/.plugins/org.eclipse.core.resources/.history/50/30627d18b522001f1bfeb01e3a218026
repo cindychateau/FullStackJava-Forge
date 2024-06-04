@@ -1,0 +1,6 @@
+package com.codingdojo.cynthia.controladores;
+
+@Controller //Encargada de decir que mi archivo es un controlador. Regresar el archivo jsp
+public class ControladorUsuarios {
+
+}

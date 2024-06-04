@@ -1,0 +1,6 @@
+package com.codingdojo.cynthia.controladores;
+
+@Controller
+public class ControladorUsuarios {
+
+}
