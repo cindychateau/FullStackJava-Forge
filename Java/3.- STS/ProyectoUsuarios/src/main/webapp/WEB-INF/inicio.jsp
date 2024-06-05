@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Inicio</title>
+<link rel="stylesheet" href="/css/style.css" >
 </head>
 <body>
 	<h1>${titulo}</h1>

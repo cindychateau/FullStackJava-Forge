@@ -1,0 +1,14 @@
+@charset "UTF-8";
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+li {
+	color: purple;
+}
+
+h1 {
+	color: green;
+}
