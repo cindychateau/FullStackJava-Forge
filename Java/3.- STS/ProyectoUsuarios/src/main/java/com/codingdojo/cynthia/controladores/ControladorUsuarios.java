@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller //Encargada de decir que mi archivo es un controlador. Regresar el archivo jsp
 public class ControladorUsuarios {
@@ -45,4 +47,36 @@ public class ControladorUsuarios {
 		return "holi.jsp";
 	}
 	
+	//3 rutas para el formulario
+	//1.- Muestra Formulario
+	@GetMapping("/formulario")
+	public String formulario() {
+		return "formulario.jsp";
+	}
+	
+	//2.- Recibe formulario
+	@PostMapping("/registro")
+	public String registro(@RequestParam(value="nombre") String nombresito,
+						   @RequestParam(value="email") String email) {
+		
+		System.out.println("El nombre del usuario es:"+nombresito);
+		System.out.println("El email del usuario es:"+email);
+		
+		return "redirect:/bienvenida"; //redirect manda a una ruta
+	}
+	
+	//3.- Redirección
+	@GetMapping("/bienvenida")
+	public String bienvenida() {
+		return "bienvenida.jsp";
+	}
+	
+	
 }
+
+
+
+
+
+
+
