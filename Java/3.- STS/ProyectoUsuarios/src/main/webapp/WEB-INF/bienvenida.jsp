@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="container">
-		<h1>¡Bienvenid@!</h1>
+		<h1>¡Bienvenid@ ${nombreUsuario} : ${emailUsuario} ! </h1>
 	</div>
 </body>
 </html>

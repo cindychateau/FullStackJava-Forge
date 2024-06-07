@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller //Encargada de decir que mi archivo es un controlador. Regresar el archivo jsp
 public class ControladorUsuarios {
 
@@ -57,10 +59,25 @@ public class ControladorUsuarios {
 	//2.- Recibe formulario
 	@PostMapping("/registro")
 	public String registro(@RequestParam(value="nombre") String nombresito,
-						   @RequestParam(value="email") String email) {
+						   @RequestParam(value="email") String email,
+						   HttpSession session) {
 		
 		System.out.println("El nombre del usuario es:"+nombresito);
 		System.out.println("El email del usuario es:"+email);
+		
+		session.setAttribute("nombreUsuario", nombresito);
+		session.setAttribute("emailUsuario", email);
+		
+		/*Object contadorObjeto = session.getAttribute("contador");
+		if(contadorObjeto == null) { //Atributo en sesión NO EXISTE
+			
+		}
+		
+		session.invalidate(); //Borra todos los datos de sesión
+		session.removeAttribute("contador");
+		
+		*/
+		
 		
 		return "redirect:/bienvenida"; //redirect manda a una ruta
 	}
