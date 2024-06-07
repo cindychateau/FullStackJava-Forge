@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -60,10 +61,27 @@ public class ControladorUsuarios {
 	@PostMapping("/registro")
 	public String registro(@RequestParam(value="nombre") String nombresito,
 						   @RequestParam(value="email") String email,
-						   HttpSession session) {
+						   HttpSession session, /*Permite guardar en sesión*/
+						   RedirectAttributes flash /*Permite enviar errores*/ ) {
 		
 		System.out.println("El nombre del usuario es:"+nombresito);
 		System.out.println("El email del usuario es:"+email);
+		
+		//Validamos la info
+		if(nombresito.equals("") && email.equals("")) {
+			flash.addFlashAttribute("error", "Por favor proporciona tu nombre y email");
+			return "redirect:/formulario";
+		}
+		
+		if(nombresito.equals("")) {
+			flash.addFlashAttribute("errorNombre", "Por favor ingresa tu nombre");
+			return "redirect:/formulario";
+		}
+		
+		if(email.equals("")) {
+			flash.addFlashAttribute("errorEmail", "Por favor ingresa tu correo");
+			return "redirect:/formulario";
+		}
 		
 		session.setAttribute("nombreUsuario", nombresito);
 		session.setAttribute("emailUsuario", email);

@@ -69,7 +69,6 @@ INDEX VERSION 1.131+/Users/cynthia/Desktop/Java - Forge/Java/3.- STS/.metadata/.
 1755792390.index
 3366767291.index
 3174241832.index
-4274895431.index
 3145327187.index
 3729184387.index
 4085061793.index
