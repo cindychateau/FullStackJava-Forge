@@ -1,6 +1,8 @@
 package com.codingdojo.cynthia.controladores;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -63,6 +65,21 @@ public class Controlador {
 		int randomNum = min + (int)(Math.random() * ((max - min) + 1));
 		oro += randomNum;
 		session.setAttribute("oro", oro); //Actualizando la puntuación
+		
+		Date fecha = new Date();
+		SimpleDateFormat formato = new SimpleDateFormat("MMMM d Y h:mm a");
+		String fechaFormateada = formato.format(fecha);
+		
+		String mensaje = "";
+		
+		if(randomNum < 0) {
+			mensaje = "Entraste a: "+lugar+" y perdiste "+randomNum+" ¡Ouch! "+fechaFormateada;
+		} else {
+			mensaje = "Entraste a: "+lugar+" y ganaste "+randomNum+" WUJUU! "+fechaFormateada;
+		}
+		
+		actividades.add(mensaje);
+		session.setAttribute("actividades", actividades);
 		
 		return "redirect:/Gold";
 	}

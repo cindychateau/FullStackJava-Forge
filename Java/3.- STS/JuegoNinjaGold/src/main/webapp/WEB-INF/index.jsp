@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +10,7 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Tu puntuación: <puntuacionaqui> </h1>
+		<h1>Tu puntuación: ${oro} </h1>
 		<div class="row">
 			<div class="col-3 border text-center">
 				<h2>Granja</h2>
@@ -42,6 +43,22 @@
 					<input type="hidden" name="lugar" value="casino" >
 					<input type="submit" class="btn btn-warning" value="¡Buscar Oro!">
 				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="card">
+				<c:forEach items="${actividades}" var="actividad">
+					
+					<c:if test="${actividad.contains('ganaste')}">
+						<p class="text-success">${actividad}</p>
+					</c:if>
+					
+					<c:if test="${actividad.contains('perdiste')}">
+						<p class="text-danger">${actividad}</p>
+					</c:if>
+					
+					
+				</c:forEach>
 			</div>
 		</div>
 	</div>
