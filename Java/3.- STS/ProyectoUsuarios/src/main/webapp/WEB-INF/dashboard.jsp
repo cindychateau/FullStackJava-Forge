@@ -13,6 +13,7 @@
 		<header>
 			<h1>¡Bienvenid@ a tu Dashboard!</h1>
 			<!-- Boton para crear un nuevo usuario -->
+			<a href="/nuevo" class="btn btn-success">Nuevo Usuario</a>
 		</header>
 		<table class="table table-hover">
 			<thead>

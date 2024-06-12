@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -119,6 +120,12 @@ public class ControladorUsuarios {
 		List<Usuario> usuarios = serv.todosUsuarios();
 		model.addAttribute("usuarios", usuarios);
 		return "dashboard.jsp";
+	}
+	
+	@GetMapping("/nuevo")
+	public String nuevo(@ModelAttribute("usuario") Usuario usuario) {
+		//@ModelAttribute crea objeto vacío de Usuario y lo manda a nuevo.jsp
+		return "nuevo.jsp";
 	}
 	
 	
