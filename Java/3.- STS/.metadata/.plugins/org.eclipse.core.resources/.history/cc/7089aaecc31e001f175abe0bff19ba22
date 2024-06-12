@@ -1,6 +1,0 @@
-package com.codingdojo.cynthia;
-
-//Heredando de la clase Vehiculo. Solo se puede tener una clase padre
-public class Auto extends Vehiculo {
-
-}

@@ -35,6 +35,7 @@ public interface RepositorioUsuarios extends CrudRepository<Usuario, Long> {
 	List<Usuario> findByNombreContaining(String palabra); //Pedro Pablo
 	
 	//SELECT * FROM usuarios ORDER BY nombre ASC
+	
 	//SELECT * FROM usuarios LIMIT 0, 10
 	
 }

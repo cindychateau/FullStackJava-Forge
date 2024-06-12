@@ -1,9 +1,0 @@
-package com.codingdojo.cynthia;
-
-public class Mammal {
-
-	private int energyLevel = 100;
-	
-	
-	
-}

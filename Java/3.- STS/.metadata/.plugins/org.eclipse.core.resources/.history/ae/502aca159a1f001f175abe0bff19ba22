@@ -1,8 +1,0 @@
-package com.codingdojo.cynthia;
-
-public class Triangulo extends Figura {
-	
-	private double base;
-	private double altura;
-	
-}
