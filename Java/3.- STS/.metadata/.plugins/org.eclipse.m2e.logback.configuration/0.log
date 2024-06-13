@@ -2372,3 +2372,27 @@
 2024-06-12 18:46:15,034 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
 2024-06-12 18:46:15,035 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src/main/resources to target/classes
 2024-06-12 18:46:15,040 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/cynthia/Desktop/Java - Forge/Java/3.- STS/ProyectoUsuarios/src/test/resources
+2024-06-13 15:30:40,363 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-06-13 15:30:43,123 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-06-13 15:30:43,223 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/cynthia/Desktop/Java - Forge/Java/3.- STS/ProyectoUsuarios/src/test/resources
+2024-06-13 15:35:42,486 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-06-13 15:35:42,612 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-06-13 15:35:42,617 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/cynthia/Desktop/Java - Forge/Java/3.- STS/ProyectoUsuarios/src/test/resources
+2024-06-13 15:36:04,672 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-06-13 15:36:05,815 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-06-13 15:36:05,847 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/cynthia/Desktop/Java - Forge/Java/3.- STS/ProyectoUsuarios/src/test/resources
+2024-06-13 15:36:18,043 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-06-13 15:36:18,655 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-06-13 15:36:18,660 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/cynthia/Desktop/Java - Forge/Java/3.- STS/ProyectoUsuarios/src/test/resources
+2024-06-13 15:36:22,921 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-06-13 15:36:22,930 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-06-13 15:36:22,934 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/cynthia/Desktop/Java - Forge/Java/3.- STS/ProyectoUsuarios/src/test/resources
+2024-06-13 15:38:18,571 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-06-13 15:38:19,870 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-06-13 15:38:19,929 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/cynthia/Desktop/Java - Forge/Java/3.- STS/ProyectoUsuarios/src/test/resources
+2024-06-13 15:39:07,290 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-06-13 15:39:07,309 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-06-13 15:39:07,336 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/cynthia/Desktop/Java - Forge/Java/3.- STS/ProyectoUsuarios/src/test/resources
+2024-06-13 15:51:45,772 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-06-13 15:51:45,788 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src/main/resources to target/classes
+2024-06-13 15:51:45,796 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/cynthia/Desktop/Java - Forge/Java/3.- STS/ProyectoUsuarios/src/test/resources

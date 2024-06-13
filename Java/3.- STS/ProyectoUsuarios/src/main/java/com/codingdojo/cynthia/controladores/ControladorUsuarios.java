@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import com.codingdojo.cynthia.modelos.Usuario;
 import com.codingdojo.cynthia.servicios.Servicio;
 
 import jakarta.servlet.http.HttpSession;
+import jakarta.validation.Valid;
 
 @Controller //Encargada de decir que mi archivo es un controlador. Regresar el archivo jsp
 public class ControladorUsuarios {
@@ -126,6 +128,17 @@ public class ControladorUsuarios {
 	public String nuevo(@ModelAttribute("usuario") Usuario usuario) {
 		//@ModelAttribute crea objeto vacío de Usuario y lo manda a nuevo.jsp
 		return "nuevo.jsp";
+	}
+	
+	@PostMapping("/crear") //@Valid me permite validar la info del objeto
+	public String crear( @Valid @ModelAttribute("usuario") Usuario usuarioNuevo,
+						BindingResult result ) { /*Encargado de enviar los msg valid*/
+		if(result.hasErrors()) {
+			return "nuevo.jsp"; //return a jsp
+		} else {
+			serv.guardarUsuario(usuarioNuevo);
+			return "redirect:/dashboard"; //redirect
+		}
 	}
 	
 	

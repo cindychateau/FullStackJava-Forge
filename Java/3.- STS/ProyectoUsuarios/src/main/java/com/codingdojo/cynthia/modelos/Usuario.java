@@ -28,7 +28,7 @@ public class Usuario { //Nombre de clase en singular
 	private String nombre; //firstName
 	
 	@NotNull
-	@Size(min=2, max=100) //mensaje de error es automático
+	@Size(min=2, max=100, message="OYE NO! Pon tu apellido") //mensaje de error es automático
 	private String apellido; //lastName
 	
 	@NotNull
