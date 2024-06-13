@@ -30,7 +30,15 @@
 						<td>${usuario.nombre}</td>
 						<td>${usuario.apellido}</td>
 						<td>${usuario.email}</td>
-						<td></td>
+						<td>
+							
+							<form action="/borrar/${usuario.id}" method="post" >
+							 	<!-- forzamos a que sea solicitud delete -->
+								<input type="hidden" name="_method" value="DELETE" >
+								<input type="submit" value="Borrar" class="btn btn-danger" >
+							</form>
+							
+						</td>
 					</tr>
 				</c:forEach>
 			</tbody>
