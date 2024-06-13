@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -148,7 +149,28 @@ public class ControladorUsuarios {
 		return "redirect:/dashboard";
 	}
 	
+	@GetMapping("/editar/{id}")
+	public String editar(@PathVariable("id") Long id,
+						 @ModelAttribute("usuario") Usuario usuario,
+						 Model model) { /*Enviar info a jsp*/
+		//Obtener el objeto de usuario que quiero editar
+		Usuario usuarioBuscado = serv.buscarUsuario(id);
+		model.addAttribute("usuario", usuarioBuscado);
+		return "editar.jsp";
+	}
 	
+	@PutMapping("/actualizar/{id}") //IMPORTANTE: debe llamarse id
+	public String actualizar(@Valid @ModelAttribute("usuario") Usuario usuarioEditado,
+							 BindingResult result) {
+		
+		if(result.hasErrors()) {
+			return "editar.jsp";
+		} else {
+			serv.guardarUsuario(usuarioEditado);
+			return "redirect:/dashboard";
+		}
+		
+	}
 }
 
 
