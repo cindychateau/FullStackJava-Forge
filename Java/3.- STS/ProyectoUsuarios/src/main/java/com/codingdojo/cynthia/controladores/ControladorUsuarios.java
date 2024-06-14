@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.codingdojo.cynthia.modelos.Salon;
 import com.codingdojo.cynthia.modelos.Usuario;
 import com.codingdojo.cynthia.servicios.Servicio;
 
@@ -127,15 +128,23 @@ public class ControladorUsuarios {
 	}
 	
 	@GetMapping("/nuevo")
-	public String nuevo(@ModelAttribute("usuario") Usuario usuario) {
+	public String nuevo(@ModelAttribute("usuario") Usuario usuario,
+						Model model /*Enviar info de mi metodo al jsp*/ ) {
+		
+		List<Salon> salones = serv.todosSalones(); //Creo la lista de salones
+		model.addAttribute("salones", salones); //crea variable salones para ser enviada a jsp
+		
 		//@ModelAttribute crea objeto vacío de Usuario y lo manda a nuevo.jsp
 		return "nuevo.jsp";
 	}
 	
 	@PostMapping("/crear") //@Valid me permite validar la info del objeto
 	public String crear( @Valid @ModelAttribute("usuario") Usuario usuarioNuevo,
-						BindingResult result ) { /*Encargado de enviar los msg valid*/
+						BindingResult result,
+						Model model) { /*Encargado de enviar los msg valid*/
 		if(result.hasErrors()) {
+			List<Salon> salones = serv.todosSalones(); //Creo la lista de salones
+			model.addAttribute("salones", salones); //crea variable salones para ser enviada a jsp
 			return "nuevo.jsp"; //return a jsp
 		} else {
 			serv.guardarUsuario(usuarioNuevo);

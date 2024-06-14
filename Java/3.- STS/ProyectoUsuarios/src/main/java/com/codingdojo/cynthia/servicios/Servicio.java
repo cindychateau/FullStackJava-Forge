@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.codingdojo.cynthia.modelos.Salon;
 import com.codingdojo.cynthia.modelos.Usuario;
+import com.codingdojo.cynthia.repositorios.RepositorioSalones;
 import com.codingdojo.cynthia.repositorios.RepositorioUsuarios;
 
 @Service
@@ -13,6 +15,9 @@ public class Servicio {
 	
 	@Autowired
 	private RepositorioUsuarios ru;
+	
+	@Autowired
+	private RepositorioSalones rs;
 	
 	//Método que me regrese todos los usuarios
 	public List<Usuario> todosUsuarios(){
@@ -32,6 +37,10 @@ public class Servicio {
 	//Método que borre en base al id
 	public void borrarUsuario(Long id) {
 		ru.deleteById(id);
+	}
+	
+	public List<Salon> todosSalones() {
+		return rs.findAll();
 	}
 	
 }
