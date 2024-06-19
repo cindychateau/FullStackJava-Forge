@@ -1,9 +1,0 @@
-@charset "UTF-8";
-
-li {
-	color: purple
-}
-
-h1 {
-	color: green,
-}
