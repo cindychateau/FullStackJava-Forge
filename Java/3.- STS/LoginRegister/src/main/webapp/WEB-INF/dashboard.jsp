@@ -12,6 +12,7 @@
 	<div class="container">
 		<header class="d-flex justify-content-between">
 			<h1>Welcome ${userInSession.firstName} !</h1>
+			<a class="btn btn-danger" href="/logout" >Log out</a>
 		</header>
 	</div>
 </body>

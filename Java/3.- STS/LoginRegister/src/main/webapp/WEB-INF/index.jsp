@@ -46,6 +46,18 @@
 			</div>
 			<div class="col-6">
 				<h2>Login</h2>
+				<p class="text-danger">${errorLogin}</p>
+				<form action="/login" method="POST">
+					<div>
+						<label>E-mail:</label>
+						<input type="email" class="form-control" name="email" >
+					</div>
+					<div>
+						<label>Password:</label>
+						<input type="password" class="form-control" name="password" >
+					</div>
+					<input type="submit" class="btn btn-info mt-3" value="Login" >
+				</form>
 			</div>
 		</div>
 	</div>

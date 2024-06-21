@@ -47,4 +47,24 @@ public class UserService {
 		
 	}
 	
+	/*Método que revisa que los datos sean correctos para Iniciar Sesión*/
+	public User login(String email, String password) {
+		//Revisamos que el correo exista en BD
+		User userTryingLogin = ur.findByEmail(email); //Objeto User o NULL
+		
+		if(userTryingLogin == null) {
+			return null;
+		}
+		
+		//Comparar las contraseñas
+		//BCrypt.checkpw(Contra NO encriptada, Contra SI encriptada) -> True o False
+		if(BCrypt.checkpw(password, userTryingLogin.getPassword())) {
+			return userTryingLogin;
+		} else {
+			return null;
+		}
+		
+		
+	}
+	
 }
