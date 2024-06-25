@@ -1,5 +1,7 @@
 package com.codingdojo.cynthia.services;
 
+import java.util.List;
+
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -83,6 +85,16 @@ public class AppService {
 	/* Método que en base a un id nos regresa un objeto de User */
 	public User getUser(Long id) {
 		return ur.findById(id).orElse(null);
+	}
+	
+	/*Método que regresa una lista de Event de una provincia*/
+	public List<Event> getEventsNear(String province) {
+		return er.findByEventProvince(province);
+	}
+	
+	/* Método que regrese una lista de Event de otras provincias */
+	public List<Event> getEventsNotNear(String province){
+		return er.findByEventProvinceIsNot(province);
 	}
 	
 }

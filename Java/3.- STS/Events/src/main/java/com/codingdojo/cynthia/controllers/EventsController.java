@@ -1,5 +1,7 @@
 package com.codingdojo.cynthia.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,8 +40,12 @@ public class EventsController {
 		model.addAttribute("user", myUser);
 		
 		//Obtener la lista de eventos en mi provincia
+		List<Event> eventsNear = serv.getEventsNear(myUser.getProvince());
+		model.addAttribute("eventsNear", eventsNear);
 		
 		//Obtener la lista de eventos en otras provincias
+		List<Event> eventsNotNear = serv.getEventsNotNear(myUser.getProvince());
+		model.addAttribute("eventsNotNear", eventsNotNear);
 		
 		//Enviar la lista de provincias
 		model.addAttribute("provinces", Province.Provinces);
@@ -67,8 +73,12 @@ public class EventsController {
 			model.addAttribute("user", myUser);
 			
 			//Obtener la lista de eventos en mi provincia
+			List<Event> eventsNear = serv.getEventsNear(myUser.getProvince());
+			model.addAttribute("eventsNear", eventsNear);
 			
 			//Obtener la lista de eventos en otras provincias
+			List<Event> eventsNotNear = serv.getEventsNotNear(myUser.getProvince());
+			model.addAttribute("eventsNotNear", eventsNotNear);
 			
 			//Enviar la lista de provincias
 			model.addAttribute("provinces", Province.Provinces);
