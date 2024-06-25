@@ -97,4 +97,26 @@ public class AppService {
 		return er.findByEventProvinceIsNot(province);
 	}
 	
+	public Event getEvent(Long id) {
+		return er.findById(id).orElse(null);
+	}
+	
+	/*Método que une un usuario a un evento*/
+	public void joinEvent(Long userId, Long eventId) {
+		User myUser = getUser(userId);
+		Event myEvent = getEvent(eventId);
+		
+		myEvent.getJoinedUsers().add(myUser);
+		er.save(myEvent);
+	}
+	
+	/*Método que cancela asistencia de un usuario a un evento*/
+	public void cancelEvent(Long userId, Long eventId) {
+		User myUser = getUser(userId);
+		Event myEvent = getEvent(eventId);
+		
+		myEvent.getJoinedUsers().remove(myUser);
+		er.save(myEvent);
+	}
+	
 }

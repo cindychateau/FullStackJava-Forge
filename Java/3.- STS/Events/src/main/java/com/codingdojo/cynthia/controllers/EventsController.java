@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.codingdojo.cynthia.models.Event;
@@ -91,5 +92,34 @@ public class EventsController {
 		
 		
 	}
+	
+	@GetMapping("/join/{eventId}")
+	public String join(@PathVariable("eventId") Long eventId,
+					   HttpSession session) {
+		/* === REVISAMOS SESION === */
+		User userTemp = (User) session.getAttribute("userInSession"); //Obj User o null
+		if(userTemp == null) {
+			return "redirect:/";
+		}
+		/* === REVISAMOS SESION === */
+		
+		serv.joinEvent(userTemp.getId(), eventId);
+		return "redirect:/dashboard";
+	}
+	
+	@GetMapping("/cancel/{eventId}")
+	public String cancel(@PathVariable("eventId") Long eventId,
+						 HttpSession session) {
+		/* === REVISAMOS SESION === */
+		User userTemp = (User) session.getAttribute("userInSession"); //Obj User o null
+		if(userTemp == null) {
+			return "redirect:/";
+		}
+		/* === REVISAMOS SESION === */
+		
+		serv.cancelEvent(userTemp.getId(), eventId);
+		return "redirect:/dashboard";
+	}
+	
 	
 }

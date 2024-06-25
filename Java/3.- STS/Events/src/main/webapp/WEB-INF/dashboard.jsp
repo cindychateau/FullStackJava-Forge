@@ -17,11 +17,105 @@
 		</header>
 		<div class="row">
 			<h2>Events in my province</h2>
-			<!-- PEND -->
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Event Name</th>
+						<th>Event Date</th>
+						<th>Event Location</th>
+						<th>Event Province</th>
+						<th>Host</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach items="${eventsNear}" var="event">
+						<tr>
+							<td> <a href="/event/${event.id}">${event.eventName}</a> </td>
+							<td>${event.eventDate}</td>
+							<td>${event.eventLocation}</td>
+							<td>${event.eventProvince}</td>
+							<td>${event.host.firstName}</td>
+							<td>
+								<!-- Botones de Editar y borrar si yo cree el evento -->
+								<c:if test="${event.host.id == userInSession.id}">
+									<!-- TAREA: Hacer la edición, borrado -->
+									<a class="btn btn-warning" href="/event/edit/${event.id}">Edit</a>
+									<form action="/event/delete/${event.id}" method="post">
+										<input type="hidden" name="_method" value="DELETE">
+										<input type="submit" value="Delete" class="btn btn-danger" >
+									</form>
+								</c:if>
+								<!-- Botones de Unirme/Cancelar -->
+								<c:if test="${event.host.id != userInSession.id}">
+									
+									<c:choose>
+										<c:when test="${event.joinedUsers.contains(user)}">
+											<div>Joined - </div>
+											<a href="/cancel/${event.id}" class="btn btn-danger" >Cancel</a>
+										</c:when>
+										<c:otherwise>
+											<a href="/join/${event.id}" class="btn btn-primary" >Join</a>
+										</c:otherwise>
+									</c:choose>
+									
+								</c:if>
+							</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
 		</div>
 		<div class="row">
 			<h2>Events in other provinces</h2>
-			<!-- PEND -->
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Event Name</th>
+						<th>Event Date</th>
+						<th>Event Location</th>
+						<th>Event Province</th>
+						<th>Host</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach items="${eventsNotNear}" var="event">
+						<tr>
+							<td> <a href="/event/${event.id}">${event.eventName}</a> </td>
+							<td>${event.eventDate}</td>
+							<td>${event.eventLocation}</td>
+							<td>${event.eventProvince}</td>
+							<td>${event.host.firstName}</td>
+							<td>
+								<c:if test="${event.host.id == userInSession.id}">
+									<!-- TAREA: Hacer la edición, borrado -->
+									<a class="btn btn-warning" href="/event/edit/${event.id}">Edit</a>
+									<form action="/event/delete/${event.id}" method="post">
+										<input type="hidden" name="_method" value="DELETE">
+										<input type="submit" value="Delete" class="btn btn-danger" >
+									</form>
+								</c:if>
+								
+								<!-- Botones de Unirme/Cancelar -->
+								<c:if test="${event.host.id != userInSession.id}">
+									
+									<c:choose>
+										<c:when test="${event.joinedUsers.contains(user)}">
+											<div>Joined - </div>
+											<a href="/cancel/${event.id}" class="btn btn-danger" >Cancel</a>
+										</c:when>
+										<c:otherwise>
+											<a href="/join/${event.id}" class="btn btn-primary" >Join</a>
+										</c:otherwise>
+									</c:choose>
+									
+								</c:if>
+							</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
 		</div>
 		<div class="row">
 			<form:form action="/create_event" method="post" modelAttribute="newEvent" >
