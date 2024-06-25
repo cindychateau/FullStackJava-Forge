@@ -80,4 +80,9 @@ public class AppService {
 		return er.save(newEvent);
 	}
 	
+	/* Método que en base a un id nos regresa un objeto de User */
+	public User getUser(Long id) {
+		return ur.findById(id).orElse(null);
+	}
+	
 }
