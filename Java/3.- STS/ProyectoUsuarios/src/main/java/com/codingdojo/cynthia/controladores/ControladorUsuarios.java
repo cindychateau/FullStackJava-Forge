@@ -1,19 +1,33 @@
 package com.codingdojo.cynthia.controladores;
 
 import java.util.HashMap;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.codingdojo.cynthia.modelos.Salon;
+import com.codingdojo.cynthia.modelos.Usuario;
+import com.codingdojo.cynthia.servicios.Servicio;
+
 import jakarta.servlet.http.HttpSession;
+import jakarta.validation.Valid;
 
 @Controller //Encargada de decir que mi archivo es un controlador. Regresar el archivo jsp
 public class ControladorUsuarios {
+	
+	@Autowired
+	private Servicio serv;
 
 	@GetMapping("/") //Creo la ruta raíz para mi proyecto
 	public String index() {
@@ -106,7 +120,66 @@ public class ControladorUsuarios {
 		return "bienvenida.jsp";
 	}
 	
+	@GetMapping("/dashboard")
+	public String dashboard(Model model) {
+		List<Usuario> usuarios = serv.todosUsuarios();
+		model.addAttribute("usuarios", usuarios);
+		return "dashboard.jsp";
+	}
 	
+	@GetMapping("/nuevo")
+	public String nuevo(@ModelAttribute("usuario") Usuario usuario,
+						Model model /*Enviar info de mi metodo al jsp*/ ) {
+		
+		List<Salon> salones = serv.todosSalones(); //Creo la lista de salones
+		model.addAttribute("salones", salones); //crea variable salones para ser enviada a jsp
+		
+		//@ModelAttribute crea objeto vacío de Usuario y lo manda a nuevo.jsp
+		return "nuevo.jsp";
+	}
+	
+	@PostMapping("/crear") //@Valid me permite validar la info del objeto
+	public String crear( @Valid @ModelAttribute("usuario") Usuario usuarioNuevo,
+						BindingResult result,
+						Model model) { /*Encargado de enviar los msg valid*/
+		if(result.hasErrors()) {
+			List<Salon> salones = serv.todosSalones(); //Creo la lista de salones
+			model.addAttribute("salones", salones); //crea variable salones para ser enviada a jsp
+			return "nuevo.jsp"; //return a jsp
+		} else {
+			serv.guardarUsuario(usuarioNuevo);
+			return "redirect:/dashboard"; //redirect
+		}
+	}
+	
+	@DeleteMapping("/borrar/{id}")
+	public String borrar(@PathVariable("id") Long idABorrar) {
+		serv.borrarUsuario(idABorrar);
+		return "redirect:/dashboard";
+	}
+	
+	@GetMapping("/editar/{id}")
+	public String editar(@PathVariable("id") Long id,
+						 @ModelAttribute("usuario") Usuario usuario,
+						 Model model) { /*Enviar info a jsp*/
+		//Obtener el objeto de usuario que quiero editar
+		Usuario usuarioBuscado = serv.buscarUsuario(id);
+		model.addAttribute("usuario", usuarioBuscado);
+		return "editar.jsp";
+	}
+	
+	@PutMapping("/actualizar/{id}") //IMPORTANTE: debe llamarse id
+	public String actualizar(@Valid @ModelAttribute("usuario") Usuario usuarioEditado,
+							 BindingResult result) {
+		
+		if(result.hasErrors()) {
+			return "editar.jsp";
+		} else {
+			serv.guardarUsuario(usuarioEditado);
+			return "redirect:/dashboard";
+		}
+		
+	}
 }
 
 
