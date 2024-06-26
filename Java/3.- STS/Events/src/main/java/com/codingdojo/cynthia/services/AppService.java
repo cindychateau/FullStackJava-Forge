@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 
 import com.codingdojo.cynthia.models.Event;
+import com.codingdojo.cynthia.models.Message;
 import com.codingdojo.cynthia.models.User;
 import com.codingdojo.cynthia.repositories.EventRepository;
 import com.codingdojo.cynthia.repositories.MessageRepository;
@@ -117,6 +118,11 @@ public class AppService {
 		
 		myEvent.getJoinedUsers().remove(myUser);
 		er.save(myEvent);
+	}
+	
+	/*Método que guarde mensajes*/
+	public Message saveMessage(Message newMessage) {
+		return mr.save(newMessage);
 	}
 	
 }
