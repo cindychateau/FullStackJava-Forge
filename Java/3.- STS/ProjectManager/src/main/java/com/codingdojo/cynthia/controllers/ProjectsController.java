@@ -1,5 +1,7 @@
 package com.codingdojo.cynthia.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 
 import com.codingdojo.cynthia.models.Project;
 import com.codingdojo.cynthia.models.User;
@@ -114,5 +117,56 @@ public class ProjectsController {
 		return "redirect:/dashboard";
 	}
 	
+	@GetMapping("/projects/edit/{id}")
+	public String projectEdit(@PathVariable("id") Long id,
+							HttpSession session,
+							@ModelAttribute("project") Project project, /*Generar un objeto vacío*/
+							Model model) {
+		/*REVISION DE SESION*/
+		User userTemp = (User) session.getAttribute("userInSession"); //Obj User o null
+		if(userTemp == null) {
+			return "redirect:/";
+		}
+		/*REVISION DE SESION*/
+		
+		//Obtener el objeto de Project
+		Project projectToEdit = ps.findProject(id);
+		
+		//Medida de seguridad extra
+		if(userTemp.getId() != projectToEdit.getLead().getId()) {
+			return "redirect:/dashboard";
+		}
+		
+		model.addAttribute("project", projectToEdit); //Objeto que SI tiene info del proyecto
+		return "edit.jsp";
+		
+	}
+	
+	@PutMapping("/projects/update")
+	public String projectUpdate(HttpSession session,
+								@Valid @ModelAttribute("project") Project project, /*Objeto si tiene info*/
+								BindingResult result) {
+		/*REVISION DE SESION*/
+		User userTemp = (User) session.getAttribute("userInSession"); //Obj User o null
+		if(userTemp == null) {
+			return "redirect:/";
+		}
+		/*REVISION DE SESION*/
+		
+		if(result.hasErrors()) {
+			return "edit.jsp";
+		} else {
+			//Debemos de agregar de nuevo los usuarios que se unieron al proyecto
+			//project -> Objeto basado en el formulario.  thisProject -> Objeto extraido de BD
+			Project thisProject = ps.findProject(project.getId());
+			List<User> usersJoinedInProject = thisProject.getJoinedUsers(); //Lista de usuarios que se unieron al proyecto
+			project.setJoinedUsers(usersJoinedInProject);
+			
+			//Guardamos proyecto
+			ps.saveProject(project);
+			return "redirect:/dashboard";
+		}
+		
+	}
 	
 }
