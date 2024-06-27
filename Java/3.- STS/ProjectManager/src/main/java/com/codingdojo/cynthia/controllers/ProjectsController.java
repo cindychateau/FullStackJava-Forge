@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.codingdojo.cynthia.models.Project;
@@ -81,6 +82,36 @@ public class ProjectsController {
 			serv.saveUser(myUser);
 			return "redirect:/dashboard";
 		}
+	}
+	
+	@GetMapping("/projects/join/{id}") // /projects/join/1 1= id del proyecto
+	public String projectJoin(@PathVariable("id") Long id,
+							  HttpSession session) {
+		/*REVISION DE SESION*/
+		User userTemp = (User) session.getAttribute("userInSession"); //Obj User o null
+		if(userTemp == null) {
+			return "redirect:/";
+		}
+		/*REVISION DE SESION*/
+		
+		//Invocar una función que dado un id de proyecto y un id de usuario, los una
+		ps.joinProject(userTemp.getId(), id);
+		return "redirect:/dashboard";
+	}
+	
+	@GetMapping("/projects/leave/{id}")
+	public String projectLeave(@PathVariable("id") Long id,
+							   HttpSession session) {
+		/*REVISION DE SESION*/
+		User userTemp = (User) session.getAttribute("userInSession"); //Obj User o null
+		if(userTemp == null) {
+			return "redirect:/";
+		}
+		/*REVISION DE SESION*/
+		
+		ps.leaveProject(userTemp.getId(), id);
+		
+		return "redirect:/dashboard";
 	}
 	
 	

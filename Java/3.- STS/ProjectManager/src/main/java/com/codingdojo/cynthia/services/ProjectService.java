@@ -31,4 +31,30 @@ public class ProjectService {
 	public List<Project> findOtherProjects(User user){
 		return pr.findByJoinedUsersNotContains(user);
 	}
+	
+	/*Método que me regrese un usuario en base al id*/
+	public User findUser(Long id) {
+		return ur.findById(id).orElse(null);
+	}
+	
+	/*Método que me regresa un proyecto en base al id*/
+	public Project findProject(Long id) {
+		return pr.findById(id).orElse(null);
+	}
+	
+	public void joinProject(Long userId, Long projectId) {
+		User myUser = findUser(userId); //Objeto de usuario con userId que recibio
+		Project projectToJoin = findProject(projectId); //Objeto project con projectIdå
+		
+		projectToJoin.getJoinedUsers().add(myUser);
+		pr.save(projectToJoin);
+	}
+	
+	public void leaveProject(Long userId, Long projectId) {
+		User myUser = findUser(userId); //Objeto de usuario con userId que recibio
+		Project projectToJoin = findProject(projectId); //Objeto project con projectIdå
+		
+		projectToJoin.getJoinedUsers().remove(myUser);
+		pr.save(projectToJoin);
+	}
 }
