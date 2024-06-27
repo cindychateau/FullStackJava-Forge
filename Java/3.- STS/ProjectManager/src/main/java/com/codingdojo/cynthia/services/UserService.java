@@ -67,4 +67,14 @@ public class UserService {
 		
 	}
 	
+	/*Método que me regrese un usuario en base al id*/
+	public User findUser(Long id) {
+		return ur.findById(id).orElse(null);
+	}
+	
+	/*Método que me guarde al usuario*/
+	public User saveUser(User user) {
+		return ur.save(user);
+	}
+	
 }
