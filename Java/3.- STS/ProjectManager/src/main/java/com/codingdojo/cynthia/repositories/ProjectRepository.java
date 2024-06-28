@@ -18,4 +18,6 @@ public interface ProjectRepository extends CrudRepository<Project, Long> {
 	//Lista de proyectos que NO incluyan al usuario
 	List<Project> findByJoinedUsersNotContains(User user);
 	
+	List<Project> findByJoinedUsersContainsOrderByDueDate(User user);  
+	
 }

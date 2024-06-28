@@ -25,7 +25,7 @@ public class ProjectService {
 	
 	/*Método que regresa los proyectos en los que mi usuario se unió*/
 	public List<Project> findMyProjects(User user){
-		return pr.findByJoinedUsersContains(user);
+		return pr.findByJoinedUsersContainsOrderByDueDate(user);
 	}
 	
 	public List<Project> findOtherProjects(User user){
