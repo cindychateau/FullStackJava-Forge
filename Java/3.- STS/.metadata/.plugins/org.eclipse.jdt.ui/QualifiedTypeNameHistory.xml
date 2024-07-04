@@ -11,4 +11,5 @@
     <fullyQualifiedTypeName name="com.codingdojo.cynthia.models.User"/>
     <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
 </qualifiedTypeNameHistroy>
